@@ -32,13 +32,12 @@ def input_output():
     nodes = int(input("How many nodes are there in total?: "))
     li = []
     # nodes are numbered 1, 2, 3, ...
-    for i in range(nodes):
-        current_node = int(input("Enter the current node number: "))
-        connections = str(input("Enter all the connections (space inbetween): "))
+    for i in range(1, nodes+1):
+        connections = str(input("Enter all the connections for Node" + " " + str(i)+ " (with space in-between): "))
         li_connections = connections.split()
         for x in range(len(li_connections)):
             li_connections[x] = int(li_connections[x])
-        li_connections.insert(0, current_node)
+        li_connections.insert(0, i)
         li.append(li_connections)
         
     li_run = []
