@@ -44,10 +44,10 @@ def input_output():
     
     runs = int(input("How many different length straight-line runs are there?: "))
     for j in range(runs):
-        a = int(input("Enter the run length: "))
+        a = int(input("Enter the run length (must be greater than or equal to 3): "))
         b = int(input("Enter the frequency of this run length: "))
         li_run.append([a, b])
     
-    print(result(li, li_run))
+    print("Total number of triangles in the figure:", result(li, li_run))
     
 input_output()
